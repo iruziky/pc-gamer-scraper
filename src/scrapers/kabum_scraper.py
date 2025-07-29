@@ -5,14 +5,12 @@ import logging
 from bs4 import BeautifulSoup
 from src.core.exceptions import ScraperNetworkError, ScraperDataNotFoundError, ScraperParsingError
 
-# Basic logging configuration
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
-# Constants
 URL_KABUM_GPU = "https://www.kabum.com.br/hardware/placa-de-video-vga"
 USER_AGENT_REQUEST = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 PAGE_NOT_FOUND_SELECTOR = "#listingEmpty > b:nth-child(1)"
@@ -34,30 +32,49 @@ class KabumScraper:
 
     def run_scraper(self):
         """
-        Executes the main scraping loop.
+        Runs the main scraping loop, iterating through all available pages.
 
-        It iterates through pages until no more products are found, collecting
-        all product data into a single list.
+        This method serves as the primary entry point. It calls the scraping
+        logic for each page sequentially, aggregates the results, and implements
+        a delay between requests.
 
         Returns:
-            list[dict]: A list of dictionaries, each representing a scraped product.
+            list[dict]: A complete list of all products found across all pages.
         """
+        
         products = list()
         while True:
-            response = self._fetch_page_content()
-            search_page = BeautifulSoup(response.text, 'lxml')
-            if search_page.select(PAGE_NOT_FOUND_SELECTOR):
-                logging.info("No more products found, scraper finished.")
+            response = self.scrape_page()
+            if not response:
                 break
-            
-            logging.info(f"Page {self.page_number} accessed successfully!")
-            data_json = self._extract_and_parse_json(search_page)
-            products.extend(self._get_products(data_json))
-            self.page_number += 1
-            
-            logging.info(f"Waiting {REQUEST_TIMEOUT} seconds for the next request...")
+            products.extend(response)
             time.sleep(REQUEST_TIMEOUT)
+            self.page_number += 1
         return products
+    
+    def scrape_page(self):
+        """
+        Scrapes a single page and returns the products found on it.
+
+        This method performs all the necessary steps for a single page:
+        fetching content, parsing HTML, checking for the end of results,
+        and extracting the product data from the embedded JSON.
+
+        Returns:
+            list[dict] | None:
+            A list of product dictionaries from the page,
+            or None if the page is empty or the last one.
+        """
+        response = self._fetch_page_content()
+        search_page = BeautifulSoup(response.text, 'lxml')
+        if search_page.select(PAGE_NOT_FOUND_SELECTOR):
+            logging.info("No more products found, scraper finished.")
+            return None
+        
+        data_json = self._extract_and_parse_json(search_page)
+        logging.info(f"Page {self.page_number} accessed successfully!")
+        logging.info(f"Waiting {REQUEST_TIMEOUT} seconds for the next request...")
+        return self._get_products(data_json)
 
     def _fetch_page_content(self):
         """
