@@ -2,37 +2,59 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
-url = 'https://www.kabum.com.br/hardware/placa-de-video-vga?page_number=1&page_size=100'
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
-}
-response = requests.get(url=url, headers=headers)
+class KabumScraper:
+    def __init__(self):
+        self.url = 'https://www.kabum.com.br/hardware/placa-de-video-vga?page_number=1&page_size=100'
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+        }
 
-soup = BeautifulSoup(response.text, 'lxml')
-script_tag = soup.find('script', type='application/json').string
+    def run_scraper(self):
+        request = self.get_url()
 
-script_json = json.loads(script_tag)
-data_str = script_json["props"]["pageProps"]["data"]
-data_json = json.loads(data_str)
+        search_page = BeautifulSoup(request.text, 'lxml')
+        
+        script_element = search_page.find('script', type='application/json')
+        if not script_element:
+            print("Erro: Script JSON da página não encontrado. Verifique a estrutura do site.")
+            return []
+        
+        script_str = script_element.string
+        
+        if not script_str:
+            print("Erro: Script JSON da página não encontrado. Verifique a estrutura do site.")
+            return []
 
-produtos = list()
-for produto in data_json["catalogServer"]["data"]:
-    name = produto.get("name", "Nome Indisponível")
-    price = produto.get("price")
+        script_json = json.loads(script_str)
+        data_str = script_json["props"]["pageProps"]["data"]
+        data_json = json.loads(data_str)
+        
+        produtos = self.get_products(data_json)
+        return produtos
     
-    if produto.get("priceWithDiscount") is not None:
-        price = produto["priceWithDiscount"]
+    def get_url(self):
+        response = requests.get(url=self.url, headers=self.headers)
+        response.raise_for_status()
+        return response
     
-    offer_data = produto.get("offer")
-    if offer_data and offer_data.get("priceWithDiscount") is not None:
-        price = offer_data["priceWithDiscount"]
+    def get_products(self, data_json):
+        produtos = list()
+        for produto in data_json["catalogServer"]["data"]:
+            name = produto.get("name", "Nome Indisponível")
+            price = produto.get("price")
 
-    produto_dict = {
-        "nome": name.replace(" ", ""),
-        "preco": (int)(price)
-    }
-    
-    produtos.append(produto_dict)
+            if produto.get("priceWithDiscount") is not None:
+                price = produto["priceWithDiscount"]
 
-with open("produtos_dict", "w", encoding="utf-8") as arquivo:
-    json.dump(produtos, arquivo, indent=4, ensure_ascii=False)
+            offer_data = produto.get("offer")
+            if offer_data and offer_data.get("priceWithDiscount") is not None:
+                price = offer_data["priceWithDiscount"]
+
+            produto_dict = {
+                "nome": name.replace(" ", ""),
+                "preco": (int)(price)
+            }
+
+            produtos.append(produto_dict)
+
+        return produtos
