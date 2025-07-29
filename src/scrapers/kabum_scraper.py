@@ -14,7 +14,7 @@ class KabumScraper:
     def run_scraper(self):
         response = self._fetch_page_content()
         data_json = self._extract_and_parse_json(response.text)
-        
+
         produtos = self.get_products(data_json)
         return produtos
 

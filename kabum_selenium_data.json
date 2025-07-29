@@ -1,0 +1,402 @@
+[
+    {
+        "nome": "Placa de Vídeo RX 6600 CLD 8G ASRock AMD Radeon, 8GB, GDDR6 - 90-GA2RZZ-00UANF",
+        "preco": 1599
+    },
+    {
+        "nome": "Placa de Vídeo XFX AMD RADEON RX 7600 Gaming Graphics Card, 8GB, GDDR6 - RX-76PMBABFY",
+        "preco": 1699
+    },
+    {
+        "nome": "Placa de Vídeo RX 7600 GAMING OC 8G AMD Radeon Gigabyte, 8GB, GDDR6, 128bits, RGB - GV-R76GAMING OC-8GD",
+        "preco": 1799
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5060 GAMING OC 8G NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Triple Fan, Ray Tracing - GV-N5060GAMING OC-8GD",
+        "preco": 2499
+    },
+    {
+        "nome": "Placa de Vídeo RX 7600 Challenger ASRock AMD Radeon, 8GB GDDR6 - 90-GA41ZZ-00UANF",
+        "preco": 1899
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 3050 Windforce OC NVIDIA GeForce, 6GB, GDDR6, DLSS, Ray Tracing - GV-N3050WF2OCV2-6GD",
+        "preco": 1499
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5070 WINDFORCE OC SFF 12G NVIDIA GeForce, 12GB GDDR7, 192bits, DLSS, Ray Tracing - 9VN5070WO-00-G10",
+        "preco": 5499
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5060 WINDFORCE OC 8G NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Ray Tracing - GV-N5060WF2OC-8GD",
+        "preco": 2299
+    },
+    {
+        "nome": "Placa de Vídeo RTX 4060 VENTUS 2x Black OC MSI NVIDIA GeForce, 8GB GDDR6, DLSS, Ray Tracing",
+        "preco": 2299
+    },
+    {
+        "nome": "Placa de Vídeo MSI RTX 5060 Ti 16G SHADOW 2X OC PLUS Geforce NVIDIA, 16GB GDDR7, 128 bits, 2617 MHz, DLSS 4, Ray Tracing - G506T-16S2CP",
+        "preco": 3399
+    },
+    {
+        "nome": "Placa de Vídeo ASUS DUAL RTX 5060 O8G NVIDIA GeForce, 8GB GDDR7, 2565MHz, 128 bits, OpenGL 4.6, DLSS 4, Ray Tracing - DUAL-RTX5060-O8G",
+        "preco": 2399
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5060 EAGLE OC 8G NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Ray Tracing - GV-N5060EAGLE OC-8GD",
+        "preco": 2399
+    },
+    {
+        "nome": "Placa de Vídeo ASRock RX 9060 XT CL 16GO AMD Radeon, 16GB, GDDR6, 128bits, OpenGL 4.6, RDNA 4 - RX9060XT CL 16GO",
+        "preco": 3599
+    },
+    {
+        "nome": "Placa de Vídeo ASRock RX 9060 XT SL 16GO AMD Radeon, 16GB, GDDR6, 128bits, Triple Fan, OpenGL 4.6, RDNA 4 - RX9060XT SL 16GO",
+        "preco": 3699
+    },
+    {
+        "nome": "Placa de Vídeo XFX RX 9060 XT OC AMD Radeon, 16GB, GDDR6, 128bits, 20 Gbps, Triple Fan, RDNA 4 - RX-96TS316B7",
+        "preco": 3299
+    },
+    {
+        "nome": "Placa de Vídeo RX 7600 Series Graphics Cards XFX AMD Radeon, 8GB GDDR6 - RX-76PQICKBY",
+        "preco": 1799
+    },
+    {
+        "nome": "Placa de Vídeo MSI GeForce RTX 5070 12G VENTUS 2X OC,12 GB GDDR7, 28Gbps, NVIDIA GeForce RTX 5070- G5070-12V2C",
+        "preco": 4599
+    },
+    {
+        "nome": "Placa de Vídeo MSI RTX 5070 12G Shadow 2x OC Nvdia Geforce, 12GB, GDDR7, OpenGL 4.6, G-SYNC - G5070-12S2C",
+        "preco": 4099
+    },
+    {
+        "nome": "Placa de Vídeo DUAL RX 7600 O8G EVO AMD Radeon, 8GB GDDR6, 128 Bits, OpenGL 4.6 - 90YV0LD0-M0NA00",
+        "preco": 1879
+    },
+    {
+        "nome": "Placa de Vídeo ASRock RX 9060 XT CL 8GO AMD Radeon, 8GB, GDDR6, 128bits, OpenGL 4.6, RDNA 4 - RX9060XT CL 8GO",
+        "preco": 2299
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5060 EAGLEOC ICE 8G NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Ray Tracing - GV-N5060EAGLEOC ICE-8GD",
+        "preco": 2399
+    },
+    {
+        "nome": "Placa de Vídeo RX 550 AMD PCYes Dual Fan Projeto Edge, 4GB GDDR5, 128 BITS - PVEX5504GBDF",
+        "preco": 592
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5070 Ti WINDFORCE SFF 16G NVIDIA GeForce, 16GB, GDDR7, 256bits, DLSS, Ray Tracing - 9VN507TW-00-G10",
+        "preco": 6499
+    },
+    {
+        "nome": "Placa de Vídeo RX 6650XT XFX Speedster SWFT210 AMD Radeon, 8GB GDDR6, HDMI 3xDP 2 FAN - RX-665X8DFDY",
+        "preco": 1999
+    },
+    {
+        "nome": "Placa de Vídeo MSI RTX 5060 8G VENTUS 2X OC Geforce NVIDIA, 8GB, GDDR7, 128 bits, 2535 MHz, DLSS 4, Ray Tracing - G5060-8V2C",
+        "preco": 2399
+    },
+    {
+        "nome": "Placa de Vídeo ASUS PRIME-RTX 5060 TI O16G NVIDIA GeForce, 16GB GDDR7, 128 bits, 2602MHz, OpenGL 4.6, Ray Tracing - 90YV0MH2-M0NA00",
+        "preco": 3799
+    },
+    {
+        "nome": "Placa de Vídeo RX 7800XT Gaming 16G XFX Speedster QICK319 AMD Radeon, 16GB DDR6, HDMI 3xDP 3 FAN - RX-78TQICKF9",
+        "preco": 3699
+    },
+    {
+        "nome": "Placa de Vídeo RTX 3060 Ventus 2X 12G OC MSI GeForce, 12GB GDDR6, 15 Gbps, Ray Tracing",
+        "preco": 1999
+    },
+    {
+        "nome": "Placa de Vídeo G610 Projeto Edge Low Profile PCYes NVIDIA GeForce, 2GB, DDR3 - PPE610DR3LPBR",
+        "preco": 189
+    },
+    {
+        "nome": "Placa de Vídeo RX 7800 XT Magnetic Air Gaming Graphics Card with XFX Qicksilver White AMD Radeon, 16GB GDDR6, Freesync - RX-78TMAIRW9",
+        "preco": 3599
+    },
+    {
+        "nome": "Placa de Vídeo RTX 5060 Ti GAMING OC 16G Gigabyte NVIDIA GeForce, 16GB GDDR7, 128bits, RGB, DLSS, Ray Tracing - GV-N506TGAMING OC-16GD",
+        "preco": 3889
+    },
+    {
+        "nome": "Placa de Vídeo ASUS PRIME RTX 5060 O8G NVIDIA GeForce, 8GB GDDR7, 2595MHz, 128 bits, DLSS 4, Triple Fan, Ray Tracing - PRIME-RTX5060-O8G",
+        "preco": 2499
+    },
+    {
+        "nome": "Placa de Vídeo ASUS PRIME RTX 5070 O12G NVIDIA Geforce, 12GB, GDDR7, Blackwell e DLSS4, Ray Tracing, Edição OC - 90YV0M10-M0NA00",
+        "preco": 4599
+    },
+    {
+        "nome": "Placa De Video Vx Pro Geforce G210 512mb Ddr3 64 Bits G210lp-512md3 HDMI/vga/dvi",
+        "preco": 85
+    },
+    {
+        "nome": "Placa de Vídeo RTX 5060 Ti EAGLE OC 16G Gigabyte NVIDIA GeForce, 16GB GDDR7, 128bits, RGB, DLSS, Ray Tracing - GV-N506TEAGLE OC-16GD",
+        "preco": 3499
+    },
+    {
+        "nome": "Suporte Para Placa De Vídeo Ntc, R10, Preto - R10blk",
+        "preco": 18
+    },
+    {
+        "nome": "Placa de Vídeo Sapphire Pulse RX 6500 XT Gaming OC AMD, 8GB, GDDR6, 2855MHz, HDMI e DP - 11314-08-20G",
+        "preco": 1449
+    },
+    {
+        "nome": "Placa de Vídeo ASUS DUAL RTX 5060 TI O16G NVIDIA GeForce, 16GB GDDR7, 2602MHz, 128 bits, OpenGL4.6, DLSS 4, Ray Tracing - 90YV0MH0-M0NA00",
+        "preco": 3999
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5070 EAGLE OC SFF 12G NVIDIA GeForce, 12GB GDDR7, 192bits, RGB, DLSS, Ray Tracing - 9VN5070EO-00-G10",
+        "preco": 4899
+    },
+    {
+        "nome": "Placa de Vídeo Galax NVIDIA GeForce RTX 3060, 12GB GDDR6, LHR, 1-Click OC, 15GBps, Ray Tracing, DLSS - 36NOL7MD1VOC",
+        "preco": 2159
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5070 GAMING OC 12G NVIDIA GeForce, 12GB GDDR7, 192bits, RGB, DLSS, Ray Tracing - 9VN5070GO-00-G10",
+        "preco": 4599
+    },
+    {
+        "nome": "Placa de Vídeo Galax RTX5060 1-Click OC NVIDIA GeForce, 8GB, 128bits, GDDR7, G-SYNC, DirectX 12 Ultimate - 56NSN8MDDCOC",
+        "preco": 2299
+    },
+    {
+        "nome": "Placa de Vídeo RTX 5070 WINDFORCE SFF 12G Gigabyte NVIDIA GeForce, 12GB, GDDR7, 192bits, DLSS, Ray Tracing - 9VN5070W-00-G10",
+        "preco": 4399
+    },
+    {
+        "nome": "Placa de Vídeo ASUS TUF RTX 5060 TI OC 16G GAMING NVIDIA Geforce, 16GB, GDDR7, OpenGL 4.6, Triple Fan, DLSS 4 - 90YV0MG0-M0NA00",
+        "preco": 3999
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RX 9060 XT Gaming OC AMD Radeon, 16GB, GDDR6, 128bits, Triple Fan, OpenGL 4.6 - GV-R9060XTGAMING OC-16GD",
+        "preco": 3299
+    },
+    {
+        "nome": "Placa de Vídeo ASUS PRIME RX 9070 XT O16G AMD Radeon, 16GB, GDDR6, Axial-tech, OpenGL 4.6 - 90YV0L71-M0NA00",
+        "preco": 5499
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5070 EAGLE OC ICE SFF 12G NVIDIA GeForce, 12GB GDDR7, 192bits, RGB, DLSS, Ray Tracing - 9VN5070EOI-00-G10",
+        "preco": 4499
+    },
+    {
+        "nome": "Placa de Vídeo RX 7600 XT OC ASUS AMD Radeon Dual O16G, 16GB GDDR6 - 90YV0K21-M0NA00",
+        "preco": 2699
+    },
+    {
+        "nome": "Placa de Vídeo ASRock RX 9070 XT Taichi OC AMD Radeon, ARGB, 16GB, GDDR6, 3100MHz, FidelityFX, RDNA - 90-GA5HZZ-00UANF",
+        "preco": 5799
+    },
+    {
+        "nome": "Placa de Vídeo Galax RTX 4060 1-Click OC 2X GEN2 NVIDIA GeForce, 8GB, 128bit, GDDR6, G-SYNC, DirectX 12 Ultimate - 527210-0134",
+        "preco": 2399
+    },
+    {
+        "nome": "Placa de Vídeo RTX 3050 Twin X2 Inno3D NVIDIA GeForce, 6GB - N30502-06D6-1711VA60",
+        "preco": 1389
+    },
+    {
+        "nome": "Placa De Vídeo Nvidia Geforce Galax RTX4060 8GB Gddr6 128 Bits Black Gf 1-click Oc - 46nsl8mdapco",
+        "preco": 2722
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5080 GAMING OC, NVIDIA, 16GB, GDDR7, BIOS DUAL, IA com FP4, DLSS 4 - GV-N5080GAMING OC-16GD G10",
+        "preco": 8999
+    },
+    {
+        "nome": "Placa de Vídeo PowerColor RX 9060 XT Reaper AMD Radeon, 16GB, GDDR6, 128bits, OpenGL 4.6, RDNA 4 - RX9060XT 16G-A",
+        "preco": 3229
+    },
+    {
+        "nome": "Placa de Vídeo RX 6500 XT V2 OC Edition, 4GB GDDR6, Axial-tech fans, 2-slot design - DUAL-RX6500XT-O4G-V2",
+        "preco": 1199
+    },
+    {
+        "nome": "Placa de Vídeo GALAX RTX 5070 1-Click OC NVIDIA GeForce, 12GB, GDDR7, 192 Bit, Ray Tracing, DLSS 4 - 57NON7MDBROC",
+        "preco": 4599
+    },
+    {
+        "nome": "Placa de Vídeo ASRock RX 6600 Challenger White AMD Radeon, 8GB, GDDR6, DirectX 12 Ultimate, RDNA 2 - 90-GA4UZZ-00UANF",
+        "preco": 1599
+    },
+    {
+        "nome": "Placa De Vídeo Galax, Geforce RTX 3050 Ex V2 (1-click Oc), 6gb, Gddr6 - 35nrldhp9oid",
+        "preco": 1299
+    },
+    {
+        "nome": "Placa de Vídeo ASUS RTX 5060 TI DUAL O8G NVIDIA GeForce, 8GB, GDDR7, DLSS, Ray Tracing - 90YV0MP2-M0NA00",
+        "preco": 2999
+    },
+    {
+        "nome": "Placa de Vídeo XFX Mercury RX 9070 XT Gaming Graphics Card AMD Radeon, 16GB, GDDR6, FidelityFX, RDNA 4 - RX-97TMERCB9",
+        "preco": 5499
+    },
+    {
+        "nome": "Placa de Vídeo GTX 750 TI PCYes NVIDIA GeForce, 4GB GDDR5, 128 Bit, Full Size - PA750TIR5DFFS",
+        "preco": 629
+    },
+    {
+        "nome": "Placa de Vídeo PCyes NVIDIA RTX 2060 Graffiti Series, 6GB, GDDR6, Preto - PA2060RTX6GDF",
+        "preco": 1679
+    },
+    {
+        "nome": "Placa de Vídeo MSI RTX 5060 Ti 8G VENTUS 2X OC PLUS NVIDIA GeForce, 8GB GDDR7, 128-bit, 2617 MHz, FP4 e DLSS 4, Ray Tracing - G506T-8V2CP",
+        "preco": 2999
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5060 AERO OC 8G NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Triple Fan, Ray Tracing - GV-N5060AERO OC-8GD",
+        "preco": 2799
+    },
+    {
+        "nome": "Placa de Vídeo Palit RTX 5070 GamingPro NVIDIA GeForce, 12GB, GDDR7, ARGB SYNC EVO, G-Sync, Ray Tracing, DLSS 4 - NE75070019K9-GB2050A",
+        "preco": 4499
+    },
+    {
+        "nome": "Placa de Vídeo Asus PRIME RTX 5060 TI O8G NVIDIA GeForce, 8GB, GDDR7, 2647MHz, 128bits, Triple Fan, DLSS 4, Ray Tracing - 90YV0MP0-M0NA00",
+        "preco": 3199
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5070 Ti WINDFORCE OC SFF 16G NVIDIA GeForce, 16GB GDDR7, 256bits, DLSS, Ray Tracing - 9VN507TWO-00-G10",
+        "preco": 6699
+    },
+    {
+        "nome": "Placa de Vídeo GALAX RTX 5070 1-Click OC White NVIDIA GeForce, 12GB, GDDR7, 192 Bits, Ray Tracing, DLSS 4 - 57NON7MDBSWH",
+        "preco": 4299
+    },
+    {
+        "nome": "Placa de Vídeo Sapphire PULSE RX 9070 XT GAMING AMD Radeon, 16GB, GDDR6, Dual HDMI, Dual DP, RDNA 4 - 11348-03-20G",
+        "preco": 6299
+    },
+    {
+        "nome": "Placa de Vídeo ASRock RX 9060 XT SL 8GO AMD Radeon, 8GB, GDDR6, 128bits, Triple Fan, OpenGL 4.6, RDNA 4 - RX9060XT SL 8GO",
+        "preco": 2499
+    },
+    {
+        "nome": "Placa de Vídeo RX 7600 XT ASUS AMD Radeon Tuf 16G Gaming OC, 16GB GDDR6 - 90YV0K20-M0NA00",
+        "preco": 2999
+    },
+    {
+        "nome": "Placa de Vídeo ASUS PRIME RX 9060 XT OC 16G AMD Radeon, 16GB, GDDR6, 128bits, Tripe Fan, OpenGL 4.6 - 90YV0LF1-M0NA00",
+        "preco": 3599
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5070 Ti GAMING OC 16G NVIDIA GeForce, 16GB GDDR7, 256bits, RGB, DLSS, Ray Tracing - 9VN507TGO-00-G10",
+        "preco": 7299
+    },
+    {
+        "nome": "Placa de Vídeo ASRock RX 9070 XT Steel Legend AMD Radeon, ARGB, 16GB, GDDR6, 2970MHz, FidelityFX, RDNA - 90-GA5DZZ-00UANF",
+        "preco": 5299
+    },
+    {
+        "nome": "Placa de Vídeo ASUS TUF RTX 5070 O12G GAMING NVIDIA Geforce, 12GB, GDDR7, Blackwell, DLSS4, Edição OC - 90YV0LZ0-M0NA00",
+        "preco": 5299
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RX 9070 GAMING OC 16G AMD Radeon, 16GB, GDDR6, 256bits, RGB, OpenGL 4.6 - GV-R9070GAMING OC-16GD",
+        "preco": 4999
+    },
+    {
+        "nome": "Placa de Vídeo ASUS RTX5090 ROG Astral Gaming OC NVIDIA GeForce, 32GB, GDDR7, ARGB, G-Sync, Ray Tracing, DLSS 4, HDR - 90YV0LW0-M0NA00",
+        "preco": 20999
+    },
+    {
+        "nome": "Placa de Vídeo XFX Mercury RX 9070 XT OC GAMING EDITION WITH AMD Radeon, RGB, 16GB, GDDR6, HDMI 3xDP, RDNA 4 - RX-97TRGBBB9",
+        "preco": 5699
+    },
+    {
+        "nome": "Placa de Vídeo MSI Geforce RTX 5070 TI 16G VENTUS 3X OC, NVIDIA, 16GB, GDDR7, Até 2497MHz - G507T-16V3C",
+        "preco": 6599
+    },
+    {
+        "nome": "Placa de Vídeo ASRock RX 9070 XT SLD 16G AMD Radeon, ARGB, 16GB, GDDR6, FidelityFX, RDNA 4 - 90-GA5VZZ-00UANF",
+        "preco": 5499
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5070 Ti EAGLE OC SFF 16G NVIDIA GeForce, 16GB GDDR7, 256bits, RGB, DLSS, Ray Tracing - 9VN507TEO-00-G10",
+        "preco": 7029
+    },
+    {
+        "nome": "Placa De Video PCi-e 1gb PCyes Edge G 210 - 64 Bits - Dvi/hdmi/vga - Low Profile - Ppe210dr3sfbr",
+        "preco": 132
+    },
+    {
+        "nome": "Placa de Vídeo ASUS TUF RTX 5060 O8G GAMING NVIDIA GeForce, 8GB GDDR7, 2677MHz, DLSS 4, Triple Fan, Ray Tracing - TUF-RTX5060-O8G-GAMING",
+        "preco": 2849
+    },
+    {
+        "nome": "Placa de Vídeo XFX Quicksilver RX 9070 XT GAMING EDITION WITH 16GB AMD Radeon, GDDR6, HDMI 3xDP, RDNA 4 - RX-97TQICKB9",
+        "preco": 5499
+    },
+    {
+        "nome": "Placa de Vídeo ASUS TUF RTX 5070 Ti O16G GAMING NVIDIA Geforce, 16GB, GDDR7, IA com FP4 e DLSS4, Edição OC - 90YV0MD0-M0NA00",
+        "preco": 7399
+    },
+    {
+        "nome": "Placa de Vídeo RX 7700XT Gaming 12G XFX Speedster QICK AMD Radeon, 12GB GDDR6, HDMI, 3xDP 3 FAN - RX-77TQICKB9",
+        "preco": 3218
+    },
+    {
+        "nome": "Placa de Vídeo GALAX RTX 5060 TI 1-Click OC 16GB NVIDIA GeForce, 128bits, GDDR7, DLSS 4, Ray Tracing - 56IZN8MDCPOC",
+        "preco": 3799
+    },
+    {
+        "nome": "Placa de Vídeo RTX 5060 Ti WINDFORCE 8G Gigabyte NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Ray Tracing - GV-N506TWF2-8GD",
+        "preco": 3199
+    },
+    {
+        "nome": "Placa De Vídeo Gamer 8GB Rx580 GDDR5, PCi-e 3.0x16, 256bits,clock 7000mhz, HDMI Displayport, Alto Desempenho",
+        "preco": 907
+    },
+    {
+        "nome": "Placa de Vídeo Galax GeForce RTX 5060 1-Click OC NVIDIA GeForce, 8GB, 128bits, GDDR7, G-SYNC, DLSS 4, Launch Edition - 56NSN8MDCPLE",
+        "preco": 2499
+    },
+    {
+        "nome": "Placa de Vídeo SAPPHIRE RX 9060 XT PULSE AMD Radeon, 8GB, GDDR6, 20 Gbps, FidelityFX, RDNA 4 - 11350-04-20G",
+        "preco": 2599
+    },
+    {
+        "nome": "Placa de Vídeo PNY GeForce RTX 4060, 8GB XLR8 Gaming VERTO, Overclocked, Dual Fan, DLSS 3 - VCG40608DFXPB1-O",
+        "preco": 2299
+    },
+    {
+        "nome": "Placa De Vídeo Rx7700 XT Speedster Qick319 AMD XFX Radeon, 12GB, GDDR6, 192-Bit - Rx-77tqickb9",
+        "preco": 3149
+    },
+    {
+        "nome": "Placa de Vídeo RTX 3060 Asus Dual O12G V2 NVIDIA GeForce, 12GB GDDR6, LHR, DLSS, Ray Tracing - DUAL-RTX3060-O12G-V2",
+        "preco": 2199
+    },
+    {
+        "nome": "Placa de Vídeo Inno3D RTX 5080 X3 OC NVIDIA GeForce, 16GB, GDDR7, G-Sync, Ray Tracing, DLSS 4, HDR - N50803-16D7X-17603930",
+        "preco": 8663
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RX 9070 XT GAMING OC 16G AMD Radeon, RGB, 16GB, GDDR6, 256bits, OpenGL 4.6 - GV-R9070XTGAMING OC-16GD",
+        "preco": 5999
+    },
+    {
+        "nome": "Placa de Vídeo Gigabyte RTX 5090 WINDFORCE OC 32G NVIDIA GeForce, 32GB, GDDR7, G-Sync, DLSS 4, Ray Tracing, HDR - GV-N5090WF3OC-32GD",
+        "preco": 19999
+    },
+    {
+        "nome": "Placa de Vídeo XFX Swift RX 9070 XT TRIPLE FAN GAMING EDITION WITH AMD Radeon, 16GB, GDDR6, HDMI 3xDP, RDNA 4 - RX-97TSWF3B9",
+        "preco": 5499
+    },
+    {
+        "nome": "Placa de Vídeo ASUS TUF RX 9070 XT O16G GAMING AMD Radeon, 16GB, GDDR6, OpenGL 4.6, RDNA 4 - 90YV0L70-M0NA00",
+        "preco": 5599
+    },
+    {
+        "nome": "Placa de Vídeo XFX RX 9060 XT OC White Gaming AMD Radeon, 8GB, GDDR6, 128bits, 20 Gbps, FidelityFX, RDNA 4 - RX-96TSW8GWQ",
+        "preco": 2349
+    }
+]

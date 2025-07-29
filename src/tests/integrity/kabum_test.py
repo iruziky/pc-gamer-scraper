@@ -59,7 +59,7 @@ try:
             except ValueError:
                 price = price_text
 
-            scraped_data_selenium.append({"nome": name.replace(" ", ""), "preco": (int)(price)})
+            scraped_data_selenium.append({"nome": name, "preco": (int)(price)})
 
         except Exception as e:
             continue
