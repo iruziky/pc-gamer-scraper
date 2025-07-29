@@ -5,11 +5,7 @@ import logging
 from bs4 import BeautifulSoup
 from src.core.exceptions import ScraperNetworkError, ScraperDataNotFoundError, ScraperParsingError
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
-)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 URL_KABUM_GPU = "https://www.kabum.com.br/hardware/placa-de-video-vga"
 USER_AGENT_REQUEST = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
@@ -17,9 +13,10 @@ PAGE_NOT_FOUND_SELECTOR = "#listingEmpty > b:nth-child(1)"
 REQUEST_TIMEOUT = 10
 
 class KabumScraper:
-    def __init__(self):
+    def __init__(self, category: str):
         """Initializes the scraper with default pagination and request headers."""
-        self.page_number = 6
+        self.category = category
+        self.page_number = 1
         self.page_size = 100
         self.headers = {
             'User-Agent': USER_AGENT_REQUEST,
@@ -30,29 +27,50 @@ class KabumScraper:
         """str: The formatted URL for the current page to be scraped."""
         return f'{URL_KABUM_GPU}?page_number={self.page_number}&page_size={self.page_size}'
 
-    def run_scraper(self):
+    def run(self, execute_all_pages: bool = False, execute_main_pages: bool = False):
         """
-        Runs the main scraping loop, iterating through all available pages.
+        Main entry point to run the scraper in a specific mode.
 
-        This method serves as the primary entry point. It calls the scraping
-        logic for each page sequentially, aggregates the results, and implements
-        a delay between requests.
+        Args:
+            execute_all_pages (bool): If True, scrapes all pages of the category.
+            execute_main_pages (bool): If True, scrapes only the first few pages.
 
         Returns:
-            list[dict]: A complete list of all products found across all pages.
+            list[dict]: A list of scraped products.
         """
-        
-        products = list()
+        if execute_all_pages:
+            return self._scrape_all_pages()
+        elif execute_main_pages:
+            return self._scrape_main_pages(num_pages=2)
+        else:
+            logging.warning("No execution mode was selected. Returning empty list.")
+            return []
+
+    def _scrape_all_pages(self):
+        """Scraping loop that iterates through all available pages."""
+        all_products = []
         while True:
-            response = self.scrape_page()
-            if not response:
+            products_from_page = self._scrape_single_page()
+            if not products_from_page:
                 break
-            products.extend(response)
-            time.sleep(REQUEST_TIMEOUT)
+            all_products.extend(products_from_page)
             self.page_number += 1
-        return products
+            time.sleep(REQUEST_TIMEOUT)
+        return all_products
+
+    def _scrape_main_pages(self, num_pages: int = 2):
+        """Scraping loop for a limited number of initial pages."""
+        all_products = []
+        for _ in range(num_pages):
+            products_from_page = self._scrape_single_page()
+            if not products_from_page:
+                break
+            all_products.extend(products_from_page)
+            self.page_number += 1
+            time.sleep(REQUEST_TIMEOUT)
+        return all_products
     
-    def scrape_page(self):
+    def _scrape_single_page(self):
         """
         Scrapes a single page and returns the products found on it.
 
