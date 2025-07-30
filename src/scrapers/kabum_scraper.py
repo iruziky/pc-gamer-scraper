@@ -2,17 +2,16 @@ import json
 import time
 import logging
 
-from bs4 import BeautifulSoup
+from src.core.config import REQUEST_DELAY, REQUEST_TIMEOUT
 from src.core.exceptions import ScraperNetworkError, ScraperDataNotFoundError, ScraperParsingError
+
+from bs4 import BeautifulSoup
 from rnet import BlockingClient, Impersonate, RequestError
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 URL_KABUM_GPU = "https://www.kabum.com.br/hardware/placa-de-video-vga"
-USER_AGENT_REQUEST = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 PAGE_NOT_FOUND_SELECTOR = "#listingEmpty > b:nth-child(1)"
-REQUEST_TIMEOUT = 5
-REQUEST_DELAY = 10
 
 class KabumScraper:
     def __init__(self, category: str):
