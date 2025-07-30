@@ -1,9 +1,12 @@
+import sys
 import requests
 import json
 import time
 import logging
+
 from bs4 import BeautifulSoup
 from src.core.exceptions import ScraperNetworkError, ScraperDataNotFoundError, ScraperParsingError
+from rnet import BlockingClient, Impersonate, RequestError
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -18,9 +21,10 @@ class KabumScraper:
         self.category = category
         self.page_number = 1
         self.page_size = 100
-        self.headers = {
-            'User-Agent': USER_AGENT_REQUEST,
-        }
+        self.client = BlockingClient(
+            impersonate=Impersonate.Chrome126,
+            timeout=REQUEST_TIMEOUT
+        )
 
     @property
     def url(self):
@@ -84,7 +88,7 @@ class KabumScraper:
             or None if the page is empty or the last one.
         """
         response = self._fetch_page_content()
-        search_page = BeautifulSoup(response.text, 'lxml')
+        search_page = BeautifulSoup(response.text(), 'lxml')
         if search_page.select(PAGE_NOT_FOUND_SELECTOR):
             logging.info("No more products found, scraper finished.")
             return None
@@ -108,10 +112,14 @@ class KabumScraper:
             requests.Response: The response object from the successful HTTP GET request.
         """
         try:
-            response = requests.get(url=self.url, headers=self.headers, timeout=REQUEST_TIMEOUT)
-            response.raise_for_status()
+            logging.info(f"Fetching URL: {self.url}")
+            response = self.client.get(self.url)
+            
+            if not response.status_code.is_success:
+                logging.error(f"Received bad status code: {response.status_code} for URL: {self.url}")
+                raise RequestError(f"HTTP Status {response.status_code}")
             return response
-        except requests.exceptions.RequestException as e:
+        except RequestError as e:
             logging.error(f"Network error on URL: {self.url} - Details: {e}")
             raise ScraperNetworkError(f"Failed to access URL: {self.url}. Details: {e}") from e
 
@@ -181,7 +189,7 @@ class KabumScraper:
             "rating_count": product.get("ratingCount", "Rating Count Unavailable"),
             "warranty": product.get("warranty", "Warranty Unavailable"),
             "isOpenBox": product.get("flags").get("isOpenbox", "Flag Unavailable"),
-            "prime_details": product.get("prime", []),
+            "prime_details": product.get("prime").get("priceWithDiscount")
         }
         return product_dict
     
