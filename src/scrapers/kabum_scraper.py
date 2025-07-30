@@ -1,5 +1,3 @@
-import sys
-import requests
 import json
 import time
 import logging
@@ -13,7 +11,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 URL_KABUM_GPU = "https://www.kabum.com.br/hardware/placa-de-video-vga"
 USER_AGENT_REQUEST = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 PAGE_NOT_FOUND_SELECTOR = "#listingEmpty > b:nth-child(1)"
-REQUEST_TIMEOUT = 10
+REQUEST_TIMEOUT = 5
+REQUEST_DELAY = 10
 
 class KabumScraper:
     def __init__(self, category: str):
@@ -59,7 +58,7 @@ class KabumScraper:
                 break
             all_products.extend(products_from_page)
             self.page_number += 1
-            time.sleep(REQUEST_TIMEOUT)
+            time.sleep(REQUEST_DELAY)
         return all_products
 
     def _scrape_main_pages(self, num_pages: int = 2):
@@ -71,7 +70,7 @@ class KabumScraper:
                 break
             all_products.extend(products_from_page)
             self.page_number += 1
-            time.sleep(REQUEST_TIMEOUT)
+            time.sleep(REQUEST_DELAY)
         return all_products
     
     def _scrape_single_page(self):
@@ -95,7 +94,7 @@ class KabumScraper:
         
         data_json = self._extract_and_parse_json(search_page)
         logging.info(f"Page {self.page_number} accessed successfully!")
-        logging.info(f"Waiting {REQUEST_TIMEOUT} seconds for the next request...")
+        logging.info(f"Waiting {REQUEST_DELAY} seconds for the next request...")
         return self._get_products(data_json)
 
     def _fetch_page_content(self):
