@@ -1,64 +1,62 @@
-# main.py
-
-import json
-import logging
 import argparse
-from src.scrapers.kabum_scraper import KabumScraper
-from src.core.exceptions import *
+import logging
+import mimetypes
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+from src.core.logging_setup import setup_logging 
+from src.datalake.raw_saver import DataLoader
+from src.network.request_orquestrator import RequestOrchestrator
+
+from datetime import datetime
+
+logger = logging.getLogger(__name__)
+
+def parse_arguments():
+    """
+    Parses command-line arguments for the script.
+
+    Sets up an argument parser to accept a single positional argument: 'url'.
+
+    Returns:
+        argparse.Namespace: An object containing the parsed command-line arguments.
+    """
+    parser = argparse.ArgumentParser(description="Process a web request.")
+    parser.add_argument(
+        "url",
+        type=str,
+        help="The URL to request."
+    )
+    return parser.parse_args()
+
+def generate_response_filename(response):
+    """
+    Generate the file name for the response based in the
+    current date/time and in Content-Type extension of the response.
+    """
+    content_type = response.headers.get('Content-Type', '').split(';')[0].strip()
+    extension = mimetypes.guess_extension(content_type)
+    return f'{datetime.now().strftime("%Y%m%d%H%M%S%f")}{extension if extension else ".html"}'
 
 def main():
     """
-    Main function to parse arguments and run the scraper.
+    The main execution function for the scraper.
+
+    This function orchestrates the entire process:
+    1. Parses the URL from command-line arguments.
+    2. Uses the RequestOrchestrator to fetch the URL's content.
+    3. If successful, generates a unique filename for the response.
+    4. Saves the raw response content to a local file using the DataLoader.
     """
-    parser = argparse.ArgumentParser(description="Scrape product data from Kabum!.")
+    args = parse_arguments()
+    request_orchestrator = RequestOrchestrator()
     
-    parser.add_argument(
-        "mode", 
-        type=str,
-        choices=['all_pages', 'main_pages'],
-        help="The scraping mode: 'all_pages' to scrape everything, or 'main_pages' for the first few pages."
-    )
+    response = request_orchestrator.make_request(args.url)
+    if response is None:
+        logger.error(f"Erro: Não foi possível obter resposta para a URL: {args.url}")
+        return
     
-    parser.add_argument(
-        "category",
-        type=str,
-        help="The category slug to scrape (e.g., 'hardware/processadores')."
-    )
-
-    args = parser.parse_args()
-    
-    try:
-        scraper = KabumScraper(category=args.category)
-        products_scraped = []
-        
-        if args.mode == 'all_pages':
-            logging.info(f"Starting scraper in FULL mode for category: {args.category}")
-            products_scraped = scraper.run(execute_all_pages=True)
-            output_filename = f"products_kabum_{args.category.replace('/', '_')}_all.json"
-            
-        elif args.mode == 'main_pages':
-            logging.info(f"Starting scraper in MAIN PAGES mode for category: {args.category}")
-            products_scraped = scraper.run(execute_main_pages=True)
-            output_filename = f"products_kabum_{args.category.replace('/', '_')}_main.json"
-
-        if products_scraped:
-            with open(output_filename, "w", encoding="utf-8") as f:
-                json.dump(products_scraped, f, indent=4, ensure_ascii=False)
-            logging.info(f"Scraped {len(products_scraped)} products and saved to '{output_filename}'")
-        else:
-            logging.warning("No products were scraped.")
-
-    except ScraperNetworkError as e:
-        logging.critical(f"[NETWORK/HTTP ERROR]: {e}")
-    except ScraperDataNotFoundError as e:
-        logging.critical(f"[SITE STRUCTURE ERROR]: {e}")
-    except ScraperParsingError as e:
-        logging.critical(f"[DATA PARSING ERROR]: {e}")
-    except Exception as e:
-        logging.exception("[UNEXPECTED ERROR]: An unhandled error occurred.")
-
+    output_filename = generate_response_filename(response)
+    DataLoader.save_response_content(response.text, output_filename)
 
 if __name__ == "__main__":
+    setup_logging()
     main()
